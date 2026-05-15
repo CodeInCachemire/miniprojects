@@ -1,4 +1,5 @@
 import argparse
+import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument('greeting', help = 'The greeting message!')
@@ -7,6 +8,8 @@ parser.add_argument('greeting', help = 'The greeting message!')
 #help text
 parser.add_argument('-n', '--numbers', type=float, nargs= 2, help = 'Add two floats, give floats!')
 parser.add_argument('-v', '--verbose', type=int, choices = [0, 1, 2], help = 'Determines how much info is displayed')
+parser.add_argument('-f', '--file', type = str, help = 'Write to file')
+parser.add_argument('--debug', action = "store_true", help = "Enables true or false.")
 
 args = parser.parse_args()
 
